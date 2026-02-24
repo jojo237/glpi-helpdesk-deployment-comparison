@@ -62,6 +62,15 @@ The objective is to simulate a real IT support environment and strengthen hands-
 
 ---
 
+## Hiw to run the project
+1. Install Docker & Docker compose
+2. Clone the repository
+3. Run: 
+    docker-compose up -d
+4. Access GLPI browser
+
+---
+
 ## Author
 Hands-on IT lab project focused on real-world IT support and infrastructure practices.
 
