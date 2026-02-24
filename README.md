@@ -11,8 +11,8 @@ The objective is to simulate a real IT support environment and strengthen hands-
 ---
 
 ## Current Status
-✅ Docker Deployment Completed  
-🔄 aaPanel Deployment – In Progress  
+- Docker Deployment Completed  
+- aaPanel Deployment – In Progress  
 
 ---
 
@@ -62,7 +62,7 @@ The objective is to simulate a real IT support environment and strengthen hands-
 
 ---
 
-## Hiw to run the project
+## How to run the project
 1. Install Docker & Docker compose
 2. Clone the repository
 3. Run: 
