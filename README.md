@@ -38,3 +38,30 @@ The objective is to simulate a real IT support environment and strengthen hands-
 ---
 
 ## Project Structure
+├── docker-version/ # Docker deployment files
+├── aapanel-version/ # aaPanel deployment (Part 2)
+├── comparaison/ # Architecture & analysis
+└── README.md
+
+---
+
+## Skills Demonstrated
+- IT Service Management (ITSM)
+- Docker Containerization
+- Linux System Administration
+- Technical Troubleshooting
+- Role-Based Access Control (RBAC)
+- Documentation & Project Structuring
+
+---
+
+## Next Phase
+- Deployment of GLPI using aaPanel
+- Comparative analysis: Docker vs Web Hosting Panel
+- Documentation of architecture, security, and maintenance differences
+
+---
+
+## Author
+Hands-on IT lab project focused on real-world IT support and infrastructure practices.
+
