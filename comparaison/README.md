@@ -1,52 +1,79 @@
-# GLPI Helpdesk Deployment – Docker vs aaPanel
+# Comparison: Docker vs aaPanel Deployment
 
 ## Objective
-This project explores two different approaches to deploying an IT Helpdesk system using GLPI.
-
-## Environments
-- Ubuntu Server 24.04 (VM)
-- Docker
-- aaPanel (Nginx + PHP + MySQL)
+This section compares two approaches used to deploy the GLPI IT helpdesk system:
+- Docker-based deployment
+- Traditional deployment using aaPanel (Nginx, PHP, MySQL)
 
 ---
 
-## Docker Deployment 
-- Successfully deployed GLPI using Docker
-- Fast and reliable setup
-- Minimal configuration required
-- Fully functional environment
+## Deployment Complexity
+
+| Criteria            | Docker                        | aaPanel                     |
+|--------------------|------------------------------|-----------------------------|
+| Setup time         | Fast                         | Longer                      |
+| Configuration      | Minimal                      | Manual and detailed         |
+| Ease of use        | Beginner-friendly            | Requires experience         |
 
 ---
 
-## aaPanel Deployment 
-- Manual deployment using Nginx, PHP, and MySQL
-- Faced multiple real-world challenges:
-  - Nginx routing issues
-  - PHP configuration constraints (open_basedir, extensions)
-  - File permissions
-  - Installation conflicts between /public and /install
-- Installation completed via CLI
-- Partial web functionality achieved
+## Stability & Reliability
+
+| Criteria            | Docker                        | aaPanel                     |
+|--------------------|------------------------------|-----------------------------|
+| Stability          | High                         | Medium                      |
+| Error handling     | Easier to isolate            | More complex                |
+| Reproducibility    | Excellent                    | Limited                     |
 
 ---
 
-## Key Learnings
-- Docker simplifies deployment and reduces configuration errors
-- Traditional deployments require deeper system-level understanding
-- Troubleshooting is a critical skill in real-world IT environments
+## Troubleshooting
+
+| Criteria            | Docker                        | aaPanel                     |
+|--------------------|------------------------------|-----------------------------|
+| Debugging          | Easier (container logs)      | Complex (multi-layer)       |
+| Common issues      | Few                          | Many (Nginx, PHP, permissions) |
 
 ---
 
-## Skills Developed
-- Linux Administration
-- Docker & Containerization
-- Nginx Configuration
-- PHP Debugging
-- MySQL Database Management
-- IT Service Management (GLPI)
+## Flexibility
+
+| Criteria            | Docker                        | aaPanel                     |
+|--------------------|------------------------------|-----------------------------|
+| Customization      | Moderate                     | High                        |
+| Control            | Container-based              | Full system control         |
+
+---
+
+## Key Challenges Faced (aaPanel)
+
+- Nginx routing issues with GLPI (/public vs /install)
+- PHP configuration restrictions (open_basedir)
+- Missing PHP extensions (mbstring, fileinfo)
+- File permission errors
+- Database access issues
+- Post-login routing problems
+
+---
+
+## Key Advantages (Docker)
+
+- Fast deployment
+- Clean and isolated environment
+- Easy to reproduce across systems
+- Minimal configuration effort
 
 ---
 
 ## Conclusion
-While Docker provides a streamlined and efficient deployment method, traditional environments highlight the complexity and importance of system configuration and troubleshooting.
+
+Docker is the most efficient and reliable solution for deploying GLPI in a modern environment.
+
+However, traditional deployment using aaPanel provides deeper insight into system configuration and highlights real-world challenges faced by IT professionals.
+
+---
+
+## Final Thought
+
+This comparison demonstrates that while modern tools simplify deployment, understanding underlying systems remains essential for troubleshooting and real-world IT operations.
 

@@ -1,76 +1,64 @@
-# GLPI Helpdesk – IT Ticketing System Deployment (Docker & aaPanel)
+# GLPI Helpdesk Deployment – Docker vs aaPanel
 
-## Project Overview
-This project focuses on deploying and evaluating an IT ticketing system (GLPI) using two different approaches:
-
-- Docker-based deployment (Primary)
-- aaPanel-based deployment (Secondary – upcoming)
-
-The objective is to simulate a real IT support environment and strengthen hands-on skills in ITSM, system administration, and containerized applications.
+## Objective
+This project explores two different approaches to deploying an IT Helpdesk system using GLPI.
 
 ---
 
-## Current Status
-- Docker Deployment Completed  
-- aaPanel Deployment – In Progress  
+## Environments
+- Ubuntu Server 24.04 (VM)
+- Docker
+- aaPanel (Nginx + PHP + MySQL)
 
 ---
 
-## Technical Environment
-- Ubuntu Server (Virtual Machine)
-- Docker & Docker Compose
-- GLPI (ITSM Tool)
-- Git & GitHub
+## Docker Deployment 
+- Successfully deployed GLPI using Docker
+- Fast and reliable setup
+- Minimal configuration required
+- Fully functional environment
 
 ---
 
-## Docker Deployment – Key Implementations
-- Installation and configuration of Docker on Linux VM
-- GLPI container deployment using Docker Compose
-- Persistent volumes configuration (data durability)
-- Restart policy configuration (service resilience)
-- Removal of installation directory for security hardening
-- Admin password change and access control setup
-- User and role creation (User / Technician)
-- Ticket lifecycle testing (creation, assignment, resolution)
-- System reboot testing to validate container auto-restart
+## aaPanel Deployment 
+- Manual deployment using Nginx, PHP, and MySQL
+- Faced multiple real-world challenges:
+  - Nginx routing issues
+  - PHP configuration constraints (open_basedir, extensions)
+  - File permissions
+  - Installation conflicts between /public and /install
+- Installation completed via CLI
+- Partial web functionality achieved
 
 ---
 
 ## Project Structure
-├── docker-version/ # Docker deployment files
-├── aapanel-version/ # aaPanel deployment (Part 2)
-├── comparaison/ # Architecture & analysis
-└── README.md
+
+```
+glpi-helpdesk-comparaison/
+├── docker-version/
+├── aapanel-version/
+├── comparaison/
+```
 
 ---
 
-## Skills Demonstrated
-- IT Service Management (ITSM)
-- Docker Containerization
-- Linux System Administration
-- Technical Troubleshooting
-- Role-Based Access Control (RBAC)
-- Documentation & Project Structuring
+## Key Learnings
+- Docker simplifies deployment and reduces configuration errors
+- Traditional deployments require deeper system-level understanding
+- Troubleshooting is a critical skill in real-world IT environments
 
 ---
 
-## Next Phase
-- Deployment of GLPI using aaPanel
-- Comparative analysis: Docker vs Web Hosting Panel
-- Documentation of architecture, security, and maintenance differences
+## Skills Developed
+- Linux Administration
+- Docker & Containerization
+- Nginx Configuration
+- PHP Debugging
+- MySQL Database Management
+- IT Service Management (GLPI)
 
 ---
 
-## How to run the project
-1. Install Docker & Docker compose
-2. Clone the repository
-3. Run: 
-    docker-compose up -d
-4. Access GLPI browser
-
----
-
-## Author
-Hands-on IT lab project focused on real-world IT support and infrastructure practices.
-
+## Conclusion
+While Docker provides a streamlined and efficient deployment method, traditional environments highlight the complexity and importance of system configuration and troubleshooting.
